@@ -3,10 +3,8 @@
 import os
 import argparse
 from PIL import Image
-from PyQt5 import QtCore
-from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtGui import QImage
-from PyQt5.QtCore import QByteArray, QIODevice, QBuffer
+from PyQt5.QtCore import QBuffer
 import base64
         
 parser = argparse.ArgumentParser(description='Gcode image encoder')
