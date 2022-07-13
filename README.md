@@ -16,7 +16,7 @@ Open Simplify3D, open the process settings and at the bottom of the script tab, 
 
 python "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" --gcodename "[output_filepath]" --codepath "C:\Users\fabio\Desktop\StlToImg\"
 
-Where "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" MUST be replaced with the path you have chosen for the file and "C:\Users\fabio\Desktop\StlToImg\" MUST be replaced with the path to the direcory where you have saved the code into.
+Where "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" MUST be replaced with the path you have chosen for the file and "C:\Users\fabio\Desktop\StlToImg\" MUST be replaced with the path of the direcory where you have saved the code into.
 
 You can also run the code manually by writing the line in a cmd window and by replacing "[output_filepath]" with the path of the gcode file.
 
@@ -29,9 +29,24 @@ I've tested it with klipper and it works without issues.
 
 
 # FOR LINUX
-The same as above but you will need to open the file and change the default path for the openscad.com file and few other parts (such as replace "\\" with "/"),
-I will try to upload a linux version of the code as soon as I can get around it.
+Download and install OpenScad (https://openscad.org/downloads.html).
 
+Install python3 and pip.
+
+Open terminal and install python dependencies with pip:
+
+pip install PyQt5 argparse pillow
+
+Download the Linux version of the python script from this repository and save in on the computer in a non root folder (for example save it in the documents or on the desktop).
+Open Simplify3D, open the process settings and at the bottom of the script tab, in the post-processing commands area, add the following line:
+
+python /home/fabio/Desktop/StlToImg-Linux.py --gcodename "[output_filepath]" --codepath /home/fabio/Desktop
+
+Where /home/fabio/Desktop/StlToImg-Linux.py MUST be replaced with the path you have chosen for the file and /home/fabio/Desktop MUST be replaced with the path of the direcory where you have saved the code into.
+
+You can also run the code manually by writing the line in a cmd window and by replacing "[output_filepath]" with the path of the gcode file.
+
+![image](https://user-images.githubusercontent.com/76878512/178851767-89b5c3f3-74ea-46f1-a0a6-f2a137c2b78f.png)
 # LIMITATIONS
 The name of the gcode file must be the same of the stl file (ex: for file cube.stl the gcode must be called cube.gcode) otherwise the program is not going to be able to load the stl file and it will not add an image in the gcode (Simplify3D does not provide an [input_filepath] variables to pass the stl input name to the code so I'm obtaining the stl file name from the gcode file name).
 
@@ -46,7 +61,7 @@ to select the resolution use the arguments: --height [height] --width [width] (e
 
 to manually select the stl file path (if the stl file is not in the folder where the gcode file resides or if it has a different name) use the argument: --stlname [path]
 
-to select the directory of the openscad.com executable use the argument: --path [path] (default is: "C:\\Program Files\\OpenSCAD\\openscad.com")
+to select the directory of the openscad.com executable use the argument: --path [path] (default is: "C:\\Program Files\\OpenSCAD\\openscad.com" for windows, and for linux is: /usr/bin/openscad)
 
 to select the code working directory (the place where the code will save the temporary files): --codepath [path] (the default is the current working directory)
 
