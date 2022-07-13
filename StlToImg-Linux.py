@@ -43,7 +43,6 @@ print("Gcode file name: " + gcodename)
 with open ("command.scad", 'w') as openscad_command:
      openscad_command.write('import("' + stlname + '");')
 command = args.path + " ./command.scad -o ./image.png --autocenter --viewall --colorscheme=Starnight --imgsize=" + str(height) + "," + str(width) + '"'
-print(command)
 os.system('"' + command + '"')
 
 image = "./image.png"
