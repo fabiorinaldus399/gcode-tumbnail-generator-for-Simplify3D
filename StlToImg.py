@@ -1,3 +1,5 @@
+## Written By Fabio Rinaldini
+
 import os
 import argparse
 from PIL import Image
