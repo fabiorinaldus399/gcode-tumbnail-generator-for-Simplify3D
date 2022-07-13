@@ -18,7 +18,7 @@ python "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" --gcodename "[output_filepa
 
 Where "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" MUST be replaced with the path you have chosen for the file.
 
-You can also run the code manually by witing the line in a cmd window and by replacing "[output_filepath]" with the path of the gcode file.
+You can also run the code manually by writing the line in a cmd window and by replacing "[output_filepath]" with the path of the gcode file.
 
 ![image](https://user-images.githubusercontent.com/76878512/178706122-4931561a-a943-4328-bcd6-74f3e6082248.png)
 
