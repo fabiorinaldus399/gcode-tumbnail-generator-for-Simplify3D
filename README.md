@@ -5,7 +5,7 @@ Encode the image of the stl model in the gcode file. Compatible with Simplify3D 
 # INSTALLATION (for windows)
 Download and install OpenScad (https://openscad.org/downloads.html).
 
-Install python3 and pip
+Install python3 and pip.
 
 Open cmd and install python dependencies with pip:
 
