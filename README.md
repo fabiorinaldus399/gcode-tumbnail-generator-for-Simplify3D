@@ -22,7 +22,7 @@ You can also run the code manually by writing the line in a cmd window and by re
 
 ![image](https://user-images.githubusercontent.com/76878512/178731985-01e1a6d3-2410-4c40-8b76-bb7d1c88c326.png)
 
-Thats it, when you export the gcode a tumbnail of the 3D model will be added at the top of the gcode file.
+That's it, when you export the gcode a tumbnail of the 3D model will be added at the top of the gcode file.
 I've tested it with klipper and it works without issues.
 
 ![image](https://user-images.githubusercontent.com/76878512/178697824-9cb6ff84-b9ea-45eb-8931-c2e3906ec053.png)
