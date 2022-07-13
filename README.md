@@ -20,7 +20,7 @@ Where "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" MUST be replaced with the pa
 
 You can also run the code manually by witing the line in a cmd window and by replacing "[output_filepath]" with the path of the gcode file.
 
-![image](https://user-images.githubusercontent.com/76878512/178697682-99871888-d962-4a13-a97c-4800f42b5f68.png)
+![image](https://user-images.githubusercontent.com/76878512/178706122-4931561a-a943-4328-bcd6-74f3e6082248.png)
 
 Thats it, when you export the gcode a tumbnail of the 3D model will be added at the top of the gcode file.
 I've tested it with klipper and it works without issues.
