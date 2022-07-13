@@ -14,13 +14,13 @@ pip install PyQt5 argparse pillow
 Download the python script from this repository and save in on the computer in a non root folder (for example save it in the documents or on the desktop).
 Open Simplify3D, open the process settings and at the bottom of the script tab, in the post-processing commands area, add the following line:
 
-python "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" --gcodename "[output_filepath]" 
+python "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" --gcodename "[output_filepath]" --codepath "C:\Users\fabio\Desktop\StlToImg\"
 
-Where "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" MUST be replaced with the path you have chosen for the file.
+Where "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" MUST be replaced with the path you have chosen for the file and "C:\Users\fabio\Desktop\StlToImg\" MUST be replaced with the path to the direcory where you have saved the code into.
 
 You can also run the code manually by writing the line in a cmd window and by replacing "[output_filepath]" with the path of the gcode file.
 
-![image](https://user-images.githubusercontent.com/76878512/178706122-4931561a-a943-4328-bcd6-74f3e6082248.png)
+![image](https://user-images.githubusercontent.com/76878512/178731985-01e1a6d3-2410-4c40-8b76-bb7d1c88c326.png)
 
 Thats it, when you export the gcode a tumbnail of the 3D model will be added at the top of the gcode file.
 I've tested it with klipper and it works without issues.
@@ -48,7 +48,7 @@ to manually select the stl file path (if the stl file is not in the folder where
 
 to select the directory of the openscad.com executable use the argument: --path [path] (default is: "C:\\Program Files\\OpenSCAD\\openscad.com")
 
-to select the code working directory (the place where the code will save the temporary files): --codepath [path] (the default is the directory where the code is saved)
+to select the code working directory (the place where the code will save the temporary files): --codepath [path] (the default is the current working directory)
 
 # COMPILE IN EXE
 To compile the python code in a single executable file:
@@ -61,5 +61,5 @@ This will create an exe file in the dist folder containing all the required comp
 
 Then change the line in Simplify3D with:
 
-python "C:\Users\fabio\Desktop\StlToImg\StlToImg.exe" --gcodename "[output_filepath]" 
+python "C:\Users\fabio\Desktop\StlToImg\StlToImg.exe" --gcodename "[output_filepath]" --codepath "C:\Users\fabio\Desktop\StlToImg\"
 
