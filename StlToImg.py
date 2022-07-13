@@ -8,7 +8,7 @@ from PyQt5.QtCore import QBuffer
 import base64
         
 parser = argparse.ArgumentParser(description='Gcode image encoder')
-parser.add_argument('--gcodename', type=str,
+parser.add_argument('--gcodename', type=str, default="",
                     help='the path of the gcode file')
 parser.add_argument('--stlname', type=str, default="",
                     help='the path of the stl file')
@@ -24,17 +24,24 @@ args = parser.parse_args()
 
 height = args.height
 width = args.width
+
 gcodename = args.gcodename
+if not os.path.exists(gcodename):
+    raise Exception ("Unable to find the gcode file " + gcodename)
+
 if args.stlname == "":
-    filename = gcodename[:-6] + ".stl"
+    stlname = gcodename[:-6] + ".stl"
 else:
-    filename = args.stlname
-filename = filename.replace("\\", "/")
-print("Stl file name: " + filename)         
+    stlname = args.stlname
+if not os.path.exists(stlname):
+    raise Exception ("Unable to find the stl file " + stlname)
+
+stlname = stlname.replace("\\", "/")
+print("Stl file name: " + stlname)         
 print("Gcode file name: " + gcodename)
      
 openscad_command = open("command.scad", "w")
-openscad_command.write('import("' + filename + '");')
+openscad_command.write('import("' + stlname + '");')
 openscad_command.close()
 command = args.path + " .\command.scad -o .\image.png --autocenter --viewall --colorscheme=Starnight --imgsize=" + str(height) + "," + str(width) 
 os.system('cmd /c "' + command + '"')
@@ -102,4 +109,4 @@ def execute(data):
         
     print("Done")
 
-execute(gcodename)    
+execute(gcodename)
