@@ -3,8 +3,6 @@
 import os
 import argparse
 from PIL import Image
-import numpy
-from numpy import asarray
 from PyQt5 import QtCore
 from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtGui import QImage
