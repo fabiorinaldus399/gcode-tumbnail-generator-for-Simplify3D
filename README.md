@@ -29,7 +29,7 @@ I've tested it with klipper and it works without issues.
 
 
 # FOR LINUX
-The same as above but you will need to open the file and change the default path for the openscad.com file and few other parts (such as replace "\" with "/"),
+The same as above but you will need to open the file and change the default path for the openscad.com file and few other parts (such as replace "\\" with "/"),
 I will try to upload a linux version of the code as soon as I can get around it.
 
 # LIMITATIONS
