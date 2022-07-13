@@ -41,19 +41,25 @@ The code can process only one stl file at the same time.
 
 # ADVANCED CONTROL
 I've added a few arguments to the python code to customize different variables:
+
 to select the resolution use the arguments: --height [height] --width [width] (ex: --height 300 --width 300). The default is 400x400.
+
 to manually select the stl file path (if the stl file is not in the same folder of the gcode file or if it has a different name) use the argument: --stlname [path]
+
 to select the directory of the openscad.com executable use the argument: --path [path] (default is: "C:\\Program Files\\OpenSCAD\\openscad.com")
+
 to select the code working directory (the place where the code will save the temporary files): --codepath [path] (the default is the directory where the code is saved)
 
 # COMPILE IN EXE
 To compile the python code in a single executable file:
 
 pip install pyinstaller
+
 pyinstaller --onefile StlToImg.py
 
-This will create an exe file in the dist folder containing all the required components to run the python script (keep in mind that executing the code in this way will increase the runtime)
+This will create an exe file in the dist folder containing all the required components to run the python script (keep in mind that executing the code in this way will increase the runtime).
 
 Then change the line in Simplify3D with:
+
 python "C:\Users\fabio\Desktop\StlToImg\StlToImg.exe" --gcodename "[output_filepath]" 
 
