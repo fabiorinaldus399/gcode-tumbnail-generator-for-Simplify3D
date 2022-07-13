@@ -1,4 +1,4 @@
-# gcode-tumbnail-generator-for-Simplify3D
+# Gcode tumbnail generator for Simplify3D and others
 Encode the image of the stl model in the gcode file. Compatible with Simplify3D and others
 
 
@@ -20,12 +20,15 @@ python "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" --gcodename "[output_filepa
 
 Where "C:\Users\fabio\Desktop\StlToImg\StlToImg.py" MUST be replaced with the path you have chosen for the file.
 
+You can also run the code manually by witing the line in a cmd window and by replacing "[output_filepath]" with the path of the gcode file.
+
 ![image](https://user-images.githubusercontent.com/76878512/178697682-99871888-d962-4a13-a97c-4800f42b5f68.png)
 
 Thats it, when you export the gcode a tumbnail of the 3D model will be added at the top of the gcode file.
 I've tested it with klipper and it works without issues.
 
 ![image](https://user-images.githubusercontent.com/76878512/178697824-9cb6ff84-b9ea-45eb-8931-c2e3906ec053.png)
+
 
 # FOR LINUX
 The same as above but you will need to open the file and change the default path for the openscad.com file and few other parts (such as replace "\" with "/"),
