@@ -37,7 +37,7 @@ The name of the gcode file must be the same of the stl file (ex: for file cube.s
 
 The gcode file MUST be exported in the same folder where the stl file resides (for the same reason above), otherwise you can add the --stlname argument and manually select the stl file as shown in the advanced control section below.
 
-The code can process only one stl file at the same time.
+The code can process only one stl file at a time.
 
 # ADVANCED CONTROL
 I've added a few arguments to the python code to customize different variables:
