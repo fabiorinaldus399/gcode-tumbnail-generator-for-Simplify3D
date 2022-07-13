@@ -42,6 +42,9 @@ Open Simplify3D, open the process settings and at the bottom of the script tab, 
 
 python "/home/fabio/Desktop/StlToImg-Linux.py" --gcodename "[output_filepath]" --codepath "/home/fabio/Desktop"
 
+# in some cases the gcode file created by Simplify3D is owned by root and so unwritable by the user, in this case add "sudo" at the beginning of the line:
+sudo python "/home/fabio/Desktop/StlToImg-Linux.py" --gcodename "[output_filepath]" --codepath "/home/fabio/Desktop"
+
 Where "/home/fabio/Desktop/StlToImg-Linux.py" MUST be replaced with the path you have chosen for the file and "/home/fabio/Desktop" MUST be replaced with the path of the direcory where you have saved the code into.
 
 You can also run the code manually by writing the line in a cmd window and by replacing "[output_filepath]" with the path of the gcode file.
