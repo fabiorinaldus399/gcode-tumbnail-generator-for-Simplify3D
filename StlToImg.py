@@ -82,7 +82,6 @@ def convertImageToGcode(encoded_image, width, height, chunk_size=78):
     return gcode
 
 def execute(data):
-
     conv_image = convertImage(image)
     if conv_image:
         encoded_image = encodeImage(conv_image)
