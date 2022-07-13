@@ -33,7 +33,7 @@ The same as above but you will need to open the file and change the default path
 I will try to upload a linux version of the code as soon as I can get around it.
 
 # LIMITATIONS
-The name of the gcode file must be the same of the stl file (ex: for file cube.stl the gcode must be called cube.gcode) otherwise the program is not going to be able to load the stl file and it will add a black image in the gcode (Simplify3D does not provide an [input_filepath] variables to pass the stl input name to the code so I'm obtaining the stl file name from the gcode file name).
+The name of the gcode file must be the same of the stl file (ex: for file cube.stl the gcode must be called cube.gcode) otherwise the program is not going to be able to load the stl file and it will not add an image in the gcode (Simplify3D does not provide an [input_filepath] variables to pass the stl input name to the code so I'm obtaining the stl file name from the gcode file name).
 
 The gcode file MUST be exported in the same folder where the stl file resides (for the same reason above), otherwise you can add the --stlname argument and manually select the stl file as shown in the advanced control section below.
 
