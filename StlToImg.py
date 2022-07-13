@@ -9,6 +9,7 @@ from PyQt5 import QtCore
 from PyQt5.QtCore import QCoreApplication
 from PyQt5.QtGui import QImage
 from PyQt5.QtCore import QByteArray, QIODevice, QBuffer
+import base64
         
 parser = argparse.ArgumentParser(description='Gcode image encoder')
 parser.add_argument('--gcodename', type=str,
@@ -45,8 +46,6 @@ os.system('cmd /c "' + command + '"')
 image = ".\image.png"
 
 ##encode image in gcode
-import base64
-
 print("Starting image encoding...")
 
 def convertImage(image):
