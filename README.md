@@ -40,13 +40,14 @@ pip install PyQt5 argparse pillow
 Download the Linux version of the python script from this repository and save in on the computer in a non root folder (for example save it in the documents or on the desktop).
 Open Simplify3D, open the process settings and at the bottom of the script tab, in the post-processing commands area, add the following line:
 
-python /home/fabio/Desktop/StlToImg-Linux.py --gcodename "[output_filepath]" --codepath /home/fabio/Desktop
+python "/home/fabio/Desktop/StlToImg-Linux.py" --gcodename "[output_filepath]" --codepath "/home/fabio/Desktop"
 
-Where /home/fabio/Desktop/StlToImg-Linux.py MUST be replaced with the path you have chosen for the file and /home/fabio/Desktop MUST be replaced with the path of the direcory where you have saved the code into.
+Where "/home/fabio/Desktop/StlToImg-Linux.py" MUST be replaced with the path you have chosen for the file and "/home/fabio/Desktop" MUST be replaced with the path of the direcory where you have saved the code into.
 
 You can also run the code manually by writing the line in a cmd window and by replacing "[output_filepath]" with the path of the gcode file.
 
-![image](https://user-images.githubusercontent.com/76878512/178851767-89b5c3f3-74ea-46f1-a0a6-f2a137c2b78f.png)
+![image](https://user-images.githubusercontent.com/76878512/178852153-8ffa2b5b-f3c2-4624-9c70-91b64b93b688.png)
+
 # LIMITATIONS
 The name of the gcode file must be the same of the stl file (ex: for file cube.stl the gcode must be called cube.gcode) otherwise the program is not going to be able to load the stl file and it will not add an image in the gcode (Simplify3D does not provide an [input_filepath] variables to pass the stl input name to the code so I'm obtaining the stl file name from the gcode file name).
 
