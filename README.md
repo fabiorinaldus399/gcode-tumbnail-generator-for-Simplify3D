@@ -47,7 +47,7 @@ sudo python "/home/fabio/Desktop/StlToImg-Linux.py" --gcodename "[output_filepat
 
 Where "/home/fabio/Desktop/StlToImg-Linux.py" MUST be replaced with the path you have chosen for the file and "/home/fabio/Desktop" MUST be replaced with the path of the direcory where you have saved the code into.
 
-You can also run the code manually by writing the line in a cmd window and by replacing "[output_filepath]" with the path of the gcode file.
+You can also run the code manually by writing the line in a terminal window and by replacing "[output_filepath]" with the path of the gcode file.
 
 ![image](https://user-images.githubusercontent.com/76878512/178852153-8ffa2b5b-f3c2-4624-9c70-91b64b93b688.png)
 
