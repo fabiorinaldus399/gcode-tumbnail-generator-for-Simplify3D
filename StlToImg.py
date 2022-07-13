@@ -72,8 +72,6 @@ def convertImageToGcode(encoded_image, width, height, chunk_size=78):
     gcode.extend(chunks)
     gcode.append("; thumbnail end")
     gcode.append(";")
-    gcode.append("; Image encoded by FR encoding software")
-    gcode.append(";")
     gcode.append("")
     return gcode
 
