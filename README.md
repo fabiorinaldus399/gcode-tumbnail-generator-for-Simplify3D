@@ -2,7 +2,7 @@
 Encode the image of the stl model in the gcode file. Compatible with Simplify3D and others.
 
 
-# INSTALLATION (for windows)
+# INSTALLATION (windows)
 Download and install OpenScad (https://openscad.org/downloads.html).
 
 Install python3 and pip.
@@ -27,8 +27,7 @@ I've tested it with klipper and it works without issues.
 
 ![image](https://user-images.githubusercontent.com/76878512/178697824-9cb6ff84-b9ea-45eb-8931-c2e3906ec053.png)
 
-
-# FOR LINUX
+# INSTALLATION (linux)
 Download and install OpenScad (https://openscad.org/downloads.html).
 
 Install python3 and pip.
