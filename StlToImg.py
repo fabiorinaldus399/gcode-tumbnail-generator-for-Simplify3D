@@ -21,7 +21,7 @@ parser.add_argument('--path', type=str, default='"C:\\Program Files\\OpenSCAD\\o
 parser.add_argument('--codepath', type=str, default=os.getcwd(),
                     help='the path for the code working directory')
 args = parser.parse_args()
-
+os.chdir(args.codepath)
 height = args.height
 width = args.width
 
@@ -82,6 +82,7 @@ def convertImageToGcode(encoded_image, width, height, chunk_size=78):
     return gcode
 
 def execute(data):
+
     conv_image = convertImage(image)
     if conv_image:
         encoded_image = encodeImage(conv_image)
@@ -108,4 +109,4 @@ def execute(data):
         
     print("Done")
 
-execute(gcodename)
+execute(gcodename)       
