@@ -9,10 +9,7 @@ Install python3 and pip
 
 Open cmd and install python dependencies with pip:
 
-pip install PyQt5 \n
-pip install numpy \n
-pip install argparse \n
-pip install pillow \n
+pip install PyQt5 numpy argparse pillow
 
 Download the python script from this repository and save in on the computer in a non root folder (for example save it in the documents or on the desktop)
 Open Simplify3D, open the process settings and at the bottom of the script tab, in the post-processing commands area, add the following line:
