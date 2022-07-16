@@ -69,6 +69,8 @@ to select the directory of the openscad.com executable use the argument: --path 
 
 to select the code working directory (the place where the code will save the temporary files): --codepath [path] (the default is the current working directory)
 
+to select the antialiasing factor: --antialiasing [factor] (default is 2 [the image will be generated at double the specified height and width and then resized by half])
+
 # COMPILE IN EXE
 To compile the python code in a single executable file:
 
