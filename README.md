@@ -61,7 +61,7 @@ The code can process only one stl file at a time.
 # ADVANCED CONTROL
 I've added a few arguments to the python code to customize different variables:
 
-to select the resolution use the arguments: --height [height] --width [width] (ex: --height 300 --width 300). The default is 400x400.
+to select the resolution use the arguments: --height [height] --width [width] (ex: --height 300 --width 300). The default is 600x600.
 
 to manually select the stl file path (if the stl file is not in the folder where the gcode file resides or if it has a different name) use the argument: --stlname [path]
 
