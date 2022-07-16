@@ -16,6 +16,8 @@ parser.add_argument('--height', type=int, default=400,
                     help='the height of the image')
 parser.add_argument('--width', type=int, default=400,
                     help='the width of the image')
+parser.add_argument('--antialias', type=int, default=2,
+                    help='antialias factor (1 = disabled)')
 parser.add_argument('--path', type=str, default='"/usr/bin/openscad',
                     help='the path of Openscad')
 parser.add_argument('--codepath', type=str, default=os.getcwd(),
@@ -24,6 +26,7 @@ args = parser.parse_args()
 os.chdir(args.codepath)
 height = args.height
 width = args.width
+antialias_factor = args.antialias
 
 gcodename = args.gcodename
 if not os.path.exists(gcodename):
@@ -42,7 +45,7 @@ print("Gcode file name: " + gcodename)
      
 with open ("command.scad", 'w') as openscad_command:
      openscad_command.write('import("' + stlname + '");')
-command = args.path + " ./command.scad -o ./image.png --autocenter --viewall --colorscheme=Starnight --imgsize=" + str(height) + "," + str(width) + '"'
+command = args.path + " ./command.scad -o ./image.png --autocenter --viewall --colorscheme=Starnight --imgsize=" + str(height*antialias_factor) + "," + str(width*antialias_factor) + '"'
 os.system('"' + command + '"')
 
 image = "./image.png"
@@ -51,6 +54,9 @@ image = "./image.png"
 print("Starting image encoding...")
 
 def convertImage(image):
+    img = Image.open(image)
+    img = img.resize((width // antialias_factor, height // antialias_factor), resample=Image.ANTIALIAS)
+    img.save(image)
     return QImage(image)
     
 def encodeImage(conv_image):
